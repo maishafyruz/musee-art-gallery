@@ -1,0 +1,25 @@
+{
+  "name": "musee-art-gallery",
+  "version": "1.0.0",
+  "description": "A personal digital art gallery for discovering and curating timeless masterpieces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maishafyruz/musee-art-gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/maishafyruz/musee-art-gallery/issues"
+  },
+  "homepage": "https://github.com/maishafyruz/musee-art-gallery#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  }
+}
