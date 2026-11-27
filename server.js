@@ -8,12 +8,14 @@
 
 import express from 'express'
 import './database.js'
+import artworkRouter from './routes/artwork-router.js'
 
 let app = express()
 let port = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.static('public'))
+app.use('/api/gallery', artworkRouter)
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`)
