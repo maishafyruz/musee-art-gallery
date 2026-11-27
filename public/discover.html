@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+    Name: Maisha Fyruz
+    Date: 11.27.2026
+    Course: CSC 372-01
+    Description: Artwork discovery page for Musée.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Musée</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+    <script src="discover.js" defer></script>
+</head>
+<body>
+    <header class="site-header compact-header">
+        <div class="brand">
+            <p class="brand-ornament" aria-hidden="true">❦</p>
+
+            <a href="/" class="logo">Musée</a>
+
+            <div class="ornament" aria-hidden="true">◆</div>
+
+            <p class="tagline">The Art of Discovery</p>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="/">Home</a>
+            <a href="/discover.html" aria-current="page">Discover</a>
+            <a href="/gallery.html">My Gallery</a>
+
+            <span id="username" hidden></span>
+            <a href="/auth/github" id="login-link">Sign in</a>
+            <button id="logout-button" hidden>Sign out</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-heading">
+            <p class="eyebrow">The Rooms of Musée</p>
+
+            <h1>Discover Masterpieces</h1>
+
+            <div class="ornament" aria-hidden="true">◆</div>
+
+            <p class="page-description">
+                A journey through centuries of artistic brilliance.
+            </p>
+
+            <form id="search-form" class="search-form">
+                <label for="search-input">
+                    Search by artist or artwork
+                </label>
+
+                <div class="search-controls">
+                    <input type="search"
+                           id="search-input"
+                           placeholder="Monet, flowers, landscapes..."
+                           required>
+
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <p class="museum-credit">
+                Explore the collection of the Cleveland Museum of Art.
+            </p>
+        </section>
+
+        <section class="exhibition">
+            <h2>The Exhibition</h2>
+
+            <p id="search-message" role="status"></p>
+
+            <div id="artwork-results" class="artwork-grid"></div>
+        </section>
+
+        <div class="ornament" aria-hidden="true">❦</div>
+    </main>
+
+    <footer>
+        <p class="footer-logo">Musée</p>
+        <p>Where art becomes personal.</p>
+        <p>Artwork provided by the Cleveland Museum of Art.</p>
+        <p>&copy; 2026 Musée</p>
+    </footer>
+</body>
+</html>

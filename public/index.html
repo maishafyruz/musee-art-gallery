@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<!--
+    Name: Maisha Fyruz
+    Date: 11.27.2026
+    Course: CSC 372-01
+    Description: Homepage for the Musée art gallery.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musée | The Art of Discovery</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <p class="brand-ornament" aria-hidden="true">❦</p>
+
+            <a href="/" class="logo">Musée</a>
+
+            <div class="ornament" aria-hidden="true">◆</div>
+
+            <p class="tagline">The Art of Discovery</p>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="/" aria-current="page">Home</a>
+            <a href="/discover.html">Discover</a>
+            <a href="/gallery.html">My Gallery</a>
+
+            <span id="username" hidden></span>
+            <a href="/auth/github" id="login-link">Sign in</a>
+            <button id="logout-button" hidden>Sign out</button>
+        </nav>
+    </header>
+
+    <main>
+        <figure class="hero-artwork">
+            <img src="images/hero.jpg"
+                 alt="An elegant gathering in a lush garden with a woman on a swing">
+
+            <figcaption>
+                The Swing — Jean-Honoré Fragonard
+            </figcaption>
+        </figure>
+
+        <section class="hero-content">
+            <p class="eyebrow">A World of Timeless Beauty</p>
+
+            <h1>
+                The beauty of art,
+                <em>the luxury of discovery.</em>
+            </h1>
+
+            <div class="ornament" aria-hidden="true">◆</div>
+
+            <p>
+                Journey through centuries of artistic brilliance
+                and curate a collection uniquely your own.
+            </p>
+
+            <a href="/discover.html" class="primary-button">
+                Enter the Gallery
+            </a>
+        </section>
+
+        
+        <section class="introduction">
+            <div class="ornament" aria-hidden="true">❦</div>
+
+            <h2>Your private collection awaits.</h2>
+
+            <p>
+                Discover the masterpieces of centuries past
+                and curate a gallery uniquely your own.
+            </p>
+
+            <div class="featured-artworks">
+                <figure>
+                    <img src="images/potrait.jpg"
+                        alt="Madame de Pompadour in an elegant floral gown">
+                    <figcaption>
+                        Madame de Pompadour
+                        <span>François Boucher</span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/reader.jpg"
+                        alt="A young woman in a golden dress reading a book">
+                    <figcaption>
+                        Young Girl Reading
+                        <span>Jean-Honoré Fragonard</span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/flower.jpg"
+                        alt="An elegant arrangement of flowers in an alabaster vase">
+                    <figcaption>
+                        Still Life with Flowers
+                        <span>Anne Vallayer-Coster</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <a href="/gallery.html" class="text-link">
+                Visit My Gallery
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer-logo">Musée</p>
+        <p>
+            Featured artworks courtesy of the National Gallery of Art and the Alte Pinakothek.
+        </p>
+    </footer>
+</body>
+</html>

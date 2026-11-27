@@ -1,4 +1,3 @@
-
 /*
  * Name: Maisha Fyruz
  * Date: 11.27.2026
@@ -7,8 +6,7 @@
  */
 
 /**
- * Searches for open-access artworks using
- * the external museum API.
+ * Searches for open-access artworks using the external museum API.
  */
 export async function searchArtworks(req, res) {
     let search = req.query.q

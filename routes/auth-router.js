@@ -1,4 +1,3 @@
-
 /*
  * Name: Maisha Fyruz
  * Date: 11.27.2026
@@ -14,8 +13,8 @@ let router = Router()
 router.get('/github', passport.authenticate('github'))
 
 router.get('/github/callback', passport.authenticate('github', {
-    successRedirect: '/auth/status',
-    failureRedirect: '/auth/status'
+    successRedirect: '/',
+    failureRedirect: '/?auth=failed'
 }))
 
 /**
