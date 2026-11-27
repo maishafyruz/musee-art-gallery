@@ -23,11 +23,11 @@ export async function getArtworks(userId) {
 /**
  * Adds an artwork to the user's personal gallery.
  */
-export async function addArtwork(userId, artworkId, title, artist, imageId) {
+export async function addArtwork(userId, artworkId, title, artist, imageUrl) {
     let result = await pool.query(
-        `INSERT INTO artworks (user_id, artwork_id, title, artist, image_id)
+        `INSERT INTO artworks (user_id, artwork_id, title, artist, image_url)
          VALUES ($1, $2, $3, $4, $5) RETURNING *`,
-        [userId, artworkId, title, artist, imageId]
+        [userId, artworkId, title, artist, imageUrl]
     )
 
     return result.rows[0]

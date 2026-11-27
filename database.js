@@ -27,7 +27,7 @@ await pool.query(`
         artwork_id INTEGER NOT NULL,
         title TEXT NOT NULL,
         artist TEXT NOT NULL,
-        image_id TEXT NOT NULL,
+        image_url TEXT NOT NULL,
         note TEXT DEFAULT '',
         UNIQUE (user_id, artwork_id)
     )

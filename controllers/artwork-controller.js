@@ -30,19 +30,19 @@ export async function listArtworks(req, res, next) {
  */
 export async function createArtwork(req, res, next) {
     try {
-        let { artworkId, title, artist, imageId } = req.body || {}
+        let { artworkId, title, artist, imageUrl } = req.body || {}
 
         if (!Number.isInteger(artworkId) || artworkId <= 0 ||
             typeof title !== 'string' || !title.trim() ||
             typeof artist !== 'string' || !artist.trim() ||
-            typeof imageId !== 'string' || !imageId.trim()) {
+            typeof imageUrl !== 'string' || !imageUrl.trim()) {
             return res.status(400).json({
                 error: 'Valid artwork information is required.'
             })
         }
 
         let artwork = await addArtwork(
-            req.user.id, artworkId, title, artist, imageId
+            req.user.id, artworkId, title, artist, imageUrl
         )
 
         res.status(201).json(artwork)
