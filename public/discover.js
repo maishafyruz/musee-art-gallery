@@ -52,6 +52,7 @@ function displayArtworks(artworks) {
         let image = document.createElement('img')
         image.src = artwork.image_url
         image.alt = artwork.title
+        image.loading = 'lazy'
 
         let title = document.createElement('h3')
         title.textContent = artwork.title
@@ -120,9 +121,12 @@ function handleSearch(event) {
 
     let search = searchInput.value.trim()
 
-    if (search) {
-        searchArtworks(search)
+    if (!search) {
+        searchMessage.textContent = 'Please enter an artwork or artist name.'
+        return
     }
+
+    searchArtworks(search)
 }
 
 searchForm.addEventListener('submit', handleSearch)

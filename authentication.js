@@ -35,10 +35,16 @@ passport.use(new GitHubStrategy({
     }
 }))
 
+/**
+ * Stores the user's database ID in the session.
+ */
 passport.serializeUser((user, done) => {
     done(null, user.id)
 })
 
+/**
+ * Retrieves the authenticated user from the database.
+ */
 passport.deserializeUser(async (id, done) => {
     try {
         let user = await getUserById(id)

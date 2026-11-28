@@ -38,7 +38,7 @@ export async function searchArtworks(req, res) {
                 let artist = 'Unknown artist'
 
                 if (artwork.creators && artwork.creators.length > 0) {
-                    artist = artwork.creators[0].description
+                    artist = artwork.creators[0].description || 'Unknown artist'
                 }
 
                 artworks.push({

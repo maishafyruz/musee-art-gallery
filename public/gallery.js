@@ -50,6 +50,7 @@ function displayGallery(artworks) {
         let image = document.createElement('img')
         image.src = artwork.image_url
         image.alt = artwork.title
+        image.loading = 'lazy'
 
         let title = document.createElement('h3')
         title.textContent = artwork.title
@@ -100,6 +101,7 @@ function displayGallery(artworks) {
  * Updates the personal note of a saved artwork.
  */
 async function updateNote(id, note, message) {
+    message.textContent = 'Saving personal note...'
     try {
         let response = await fetch('/api/gallery/' + id, {
             method: 'PUT',
